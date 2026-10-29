@@ -1,0 +1,14 @@
+// R4 验证脚本「静态门」配置（JSONC，可选）
+// 复制到工作目录并保持文件名 pyrightconfig.json，从该目录运行：
+//   basedpyright --outputjson <verify_script.py>
+// 门 = summary.errorCount == 0 才执行数值验证；warnings 只看不拦。
+// 只拦脚本实现 bug（拼写错 / 未定义名 / 错签名 / 某路径未赋值），不拦推导错误。
+{
+  "typeCheckingMode": "basic",
+  "reportUndefinedVariable": "error",
+  "reportAttributeAccessIssue": "error",
+  "reportCallIssue": "error",
+  "reportPossiblyUnboundVariable": "error",
+  "reportIndexIssue": "error",
+  "reportOptionalMemberAccess": "error"
+}
